@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://v40.pingendo.com/assets/4.0.0/default/theme.css" type="text/css"> </head>
+
+<body class="border border-secondary">
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fa d-inline fa-lg fa-adn"></i>
+        <b>&nbsp;GestionAssociation</b>
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="vue3.html">
+              <i class="fa d-inline fa-lg fa-plus"></i>&nbsp;Souscrire</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa d-inline fa-lg fa-cogs"></i>&nbsp;En cours</a>
+          </li>
+        </ul>
+        <a class="btn navbar-btn ml-2 text-white btn-secondary">
+          <i class="fa d-inline fa-lg fa-user-circle-o"></i>&nbsp;Deconnexion</a>
+      </div>
+    </div>
+  </nav>
+  <div class="py-1  text-white bg-primary filter-light text-right">
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="breadcrumb" style="margin-bottom:0px;margin-top:0px">
+            <li class="breadcrumb-item">
+              <a href="vue2.html">Souscriptions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-center bg-light">
+    <div class="container w-100">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Nouvelle Souscription</div>
+            <div class="card-body">
+              <form class="">
+                <div class="form-group">
+                  <label for="adherent">Adhérent</label>
+                  <select class="form-control" id="adherent">
+                    <option>Adhérent 1</option>
+                    <option>Adhérent 2</option>
+                    <option>Adhérent 3</option>
+                    <option>Adhérent 4</option>
+                    <option>Adhérent 5</option>
+                  </select>
+                  <div class="form-group">
+                    <label for="number-part">Nombre de parts</label>
+                    <input type="number" class="form-control" id="number-part" value="1"> </div>
+                  <div class="form-group py-0 my-0">
+                    <hr>
+                    <p class="text-left ml-auto"> Montant :
+                      <span>#montant</span>
+                    </p>
+                    <hr>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+       		<canvas id="pieChart" width="25%" height="25%"></canvas>
+       	</div>        
+      </div>
+      <div class="py-2 bg- text-">
+        <div class="container"> </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
+		<script>
+			//pie
+			var ctxP = document.getElementById("pieChart").getContext('2d');
+			var myPieChart = new Chart(ctxP, {
+			    type: 'pie',
+			    data: {
+			        labels: ["Adhérent 1", "Adhérent 2", "Adhérent 3", "Adhérent 4", "Adhérent 5"],
+			        datasets: [
+			            {
+			                data: [300, 50, 100, 40, 120],
+			                backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+			                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+			            }
+			        ]
+			    },
+			    options: {
+			        responsive: true
+			    }
+			});
+		</script>      
+    </div>
+  </div>
+  <div class="py-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mt-3 text-center">
+          <p>© Copyright 2018 GE - All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
