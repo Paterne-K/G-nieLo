@@ -39,7 +39,7 @@
       <div class="row align-items-end align-self-end d-inline-flex">
         <div class="col-md-2">
           <form class="form-inline justify-content-left">
-            <button type="submit" class="btn btn-secondary">Nouveau&nbsp;</button>
+            <button type="submit" class="btn btn-secondary data-toggle="modal" data-target="#ajout">Nouveau&nbsp;</button>
           </form>
         </div>
       </div>
@@ -50,7 +50,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="list-group">
-            <a href="vue2.html" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">Adhérent 1</h5>
                 <small>3 days ago</small>
@@ -68,47 +68,59 @@
                 </div>
               </div>              
             </a>
-            <a href="vue2.html" class="list-group-item list-group-item-action flex-column align-items-start">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Adhérent 2</h5>
-                <small class="text-muted">3 days ago</small>
-              </div>
-            </a>
-            <a href="vue2.html" class="list-group-item list-group-item-action flex-column align-items-start">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Adhérent 3</h5>
-                <small class="text-muted">3 days ago</small>
-              </div>
-            </a>
-            <a href="vue2.html" class="list-group-item list-group-item-action flex-column align-items-start">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Adhérent 4</h5>
-                <small class="text-muted">3 days ago</small>
-              </div>
-            </a>
-            <a href="vue2.html" class="list-group-item list-group-item-action flex-column align-items-start">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Adhérent 5</h5>
-                <small class="text-muted">3 days ago</small>
-              </div>
-            </a>
-            <a href="vue2.html" class="list-group-item list-group-item-action flex-column align-items-start">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Adhérent 6</h5>
-                <small class="text-muted">3 days ago</small>
-              </div>
-            </a>
-            <a href="vue2.html" class="list-group-item list-group-item-action flex-column align-items-start">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Adhérent 7</h5>
-                <small class="text-muted">3 days ago</small>
-              </div>
-            </a>
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
               <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Adhérent 8</h5>
-                <small class="text-muted">3 days ago</small>
+                <h5 class="mb-1">Adhérent 2</h5>
+                <small>3 days ago</small>
               </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <button class="btn btn-light" data-toggle="modal" data-target="#emprunt">
+                  	Emprunt
+                  </button>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-light" data-toggle="modal" data-target="#retour">
+                  	Retour
+                  </button>
+                </div>
+              </div>              
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Adhérent 3</h5>
+                <small>3 days ago</small>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <button class="btn btn-light" data-toggle="modal" data-target="#emprunt">
+                  	Emprunt
+                  </button>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-light" data-toggle="modal" data-target="#retour">
+                  	Retour
+                  </button>
+                </div>
+              </div>              
+            </a>
+            <a href="#x" class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Adhérent 4</h5>
+                <small>3 days ago</small>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <button class="btn btn-light" data-toggle="modal" data-target="#emprunt">
+                  	Emprunt
+                  </button>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-light" data-toggle="modal" data-target="#retour">
+                  	Retour
+                  </button>
+                </div>
+              </div>              
             </a>
           </div>
         </div>
@@ -134,11 +146,18 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	        ...
+	        <form class="">
+                <div class="form-group">
+                  <label>Montant 
+				    <input type="number" class="form-control" placeholder="0.00" required name="price" min="0" value="0" step="0.01" title="Currency" pattern="^\d+(?:\.\d{1,2})?$" onblur="this.parentNode.parentNode.style.backgroundColor=/^\d+(?:\.\d{1,2})?$/.test(this.value)?'inherit':'red'">
+				</label>
+                  <!--label for="adherent">Montant à emprunter</label>
+                  <input type="text" class="form-control" id="number-part" placeholder="Montant"--> 
+              	</div>
+          	</form>                             
 	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
+	      <div class="modal-footer">	        
+	        <button type="button" class="btn btn-primary">Enregistrer</button>
 	      </div>
 	    </div>
   </div>  
@@ -158,6 +177,42 @@
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+  </div>  
+</div>
+<div class="modal fade" id="ajout" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLongTitle">Ajout d'un nouvel adhérent</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form class="">
+                <div class="form-group">
+                  <label for="adherent">Nom de l'adhérent</label>
+                  <input type="text" name="nom" placeholder="nom">
+              	</div>
+	              <div class="form-group">
+	                <label for="matricule">Matricule</label>
+	                <input type="text" class="form-control" id="matricule"> 
+	              </div>
+	              <div class="form-group">
+	                <label for="matricule">Adresse</label>
+	                <input type="text" class="form-control" id="adresse"> 
+	              </div>
+	              <div class="form-group">
+	                <label for="matricule">Téléphone</label>
+	                <input type="number" class="form-control" id=""> 
+	              </div>                                   
+                </div>
+              </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ajouter</button>	        
 	      </div>
 	    </div>
   </div>  
